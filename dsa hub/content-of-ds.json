@@ -1,0 +1,277 @@
+{
+    "array": {
+        "title": "Array",
+        "kicker": "A row of numbered boxes",
+        "whatIsIt": "An array is a list of items stored right next to each other in memory. Every item has a number, called an index, starting at 0.",
+        "whyUseIt": "Because every item has a fixed spot, you can jump straight to any item instantly instead of hunting for it. That makes arrays the go-to choice whenever you need fast lookups.",
+        "analogy": "Think of a row of numbered lockers. If someone tells you 'locker 7', you walk straight to it - you don't check lockers 1 through 6 first.",
+        "code": "ds-cpp/array.cpp",
+        "operations": [
+            { "name": "Get item by index", "complexity": "O(1)" },
+            { "name": "Search for a value", "complexity": "O(n)" },
+            { "name": "Add item to the end", "complexity": "O(1)" },
+            { "name": "Add item to the start/middle", "complexity": "O(n)" },
+            { "name": "Remove an item", "complexity": "O(n)" }
+        ],
+        "types": [
+            { "name": "Static array", "description": "Its size is locked in from the start. Very fast, but it can't grow." },
+            { "name": "Dynamic array", "description": "Grows automatically when it runs out of room. This is what std::vector does in C++." }
+        ],
+        "visualImage": "assets/visuals/array.svg",
+        "visualAlt": "Five boxes in a row labeled with indexes 0 through 4",
+        "interviewQuestions": [
+            "Reverse an array without using extra space.",
+            "Find the largest sum you can get from a group of neighboring numbers (Kadane's algorithm).",
+            "Find the missing number in a list that should contain 1 to n.",
+            "Rotate an array to the left or right by k positions."
+        ]
+    },
+    "stack": {
+        "title": "Stack",
+        "kicker": "Last one in is the first one out",
+        "whatIsIt": "A stack only lets you add or remove items from one single end, called the top. You can't reach into the middle.",
+        "whyUseIt": "Stacks are perfect whenever the most recent thing needs to be handled first - like the undo button in a text editor, or how a program remembers which function called which.",
+        "analogy": "A stack of plates on a table. You place a new plate on top, and when you need a plate, you take the top one. You never pull one out from the bottom.",
+        "code": "ds-cpp/stack.cpp",
+        "operations": [
+            { "name": "Push (add to top)", "complexity": "O(1)" },
+            { "name": "Pop (remove from top)", "complexity": "O(1)" },
+            { "name": "Peek (look at the top)", "complexity": "O(1)" },
+            { "name": "Search", "complexity": "O(n)" }
+        ],
+        "types": [
+            { "name": "Array-based stack", "description": "Built on top of an array or vector." },
+            { "name": "Linked-list-based stack", "description": "Every push or pop just adds/removes a node at the front of a chain." }
+        ],
+        "visualImage": "assets/visuals/stack.svg",
+        "visualAlt": "A vertical stack of blocks with the top block highlighted",
+        "interviewQuestions": [
+            "Check whether the brackets in a string are balanced.",
+            "Build a queue using only two stacks.",
+            "Evaluate a postfix math expression.",
+            "Design a stack that can tell you its minimum value in O(1) time."
+        ]
+    },
+    "queue": {
+        "title": "Queue",
+        "kicker": "First one in is the first one out",
+        "whatIsIt": "A queue adds new items at the back and removes items from the front - the exact opposite ends.",
+        "whyUseIt": "Queues are the natural fit whenever things need to be handled in the order they arrived, like a print queue or a list of requests waiting to be processed.",
+        "analogy": "A line at a coffee shop. Whoever joined the line first gets served first, and every new person joins at the back.",
+        "code": "ds-cpp/queue.cpp",
+        "operations": [
+            { "name": "Enqueue (add to back)", "complexity": "O(1)" },
+            { "name": "Dequeue (remove from front)", "complexity": "O(1)" },
+            { "name": "Peek (look at the front)", "complexity": "O(1)" },
+            { "name": "Search", "complexity": "O(n)" }
+        ],
+        "types": [
+            { "name": "Simple queue", "description": "Strict first-come, first-served order." },
+            { "name": "Circular queue", "description": "Wraps back around to the start so freed-up space gets reused." },
+            { "name": "Priority queue", "description": "Items leave based on importance, not on arrival order." }
+        ],
+        "visualImage": "assets/visuals/queue.svg",
+        "visualAlt": "A row of blocks with an arrow entering at the back and leaving at the front",
+        "interviewQuestions": [
+            "Build a queue using only two stacks.",
+            "Design a circular queue from scratch.",
+            "Build a priority queue without using a library.",
+            "Find the first character in a stream that never repeats."
+        ]
+    },
+    "string": {
+        "title": "String",
+        "kicker": "A sequence of characters",
+        "whatIsIt": "A string is just text: a sequence of characters sitting next to each other in memory, like a name or a sentence.",
+        "whyUseIt": "Almost every program handles text somewhere - names, messages, file paths - and strings are how that text gets stored, searched, and changed.",
+        "analogy": "A word written on a strip of paper, one letter per box. You can point at any letter using its position, just like an array.",
+        "code": "ds-cpp/string.cpp",
+        "operations": [
+            { "name": "Get character by index", "complexity": "O(1)" },
+            { "name": "Search for a character", "complexity": "O(n)" },
+            { "name": "Join two strings together", "complexity": "O(n)" },
+            { "name": "Get a piece of the string", "complexity": "O(k)" },
+            { "name": "Insert or remove characters", "complexity": "O(n)" }
+        ],
+        "types": [
+            { "name": "Immutable string", "description": "Can't be changed after it's created - editing it actually creates a brand new string." },
+            { "name": "Mutable string", "description": "Can be edited in place without creating a new copy. C++'s std::string works this way." }
+        ],
+        "visualImage": "assets/visuals/string.svg",
+        "visualAlt": "Characters H, E, L, L, O stored in consecutive indexed boxes",
+        "interviewQuestions": [
+            "Reverse a string in place.",
+            "Check whether a string reads the same backward as forward.",
+            "Find the first character that never repeats.",
+            "Check whether two strings are anagrams of each other."
+        ]
+    },
+    "linked-list": {
+        "title": "Linked List",
+        "kicker": "A chain of connected nodes",
+        "whatIsIt": "Instead of sitting side by side like an array, each item (called a node) lives on its own and simply points to the next one in line.",
+        "whyUseIt": "Because nothing needs to be next to anything else, you can add or remove an item without shifting every other item over - something arrays can't do cheaply.",
+        "analogy": "A treasure hunt: each clue tells you where to find the next one. You can't skip ahead - you must follow the chain one link at a time.",
+        "code": "ds-cpp/linked-list.cpp",
+        "operations": [
+            { "name": "Get item by position", "complexity": "O(n)" },
+            { "name": "Search", "complexity": "O(n)" },
+            { "name": "Insert at the front", "complexity": "O(1)" },
+            { "name": "Insert at the end", "complexity": "O(n)" },
+            { "name": "Delete an item", "complexity": "O(n)" }
+        ],
+        "types": [
+            { "name": "Singly linked list", "description": "Each node points forward to the next node only." },
+            { "name": "Doubly linked list", "description": "Each node points both forward and backward." },
+            { "name": "Circular linked list", "description": "The last node loops back and points to the first one." }
+        ],
+        "visualImage": "assets/visuals/linked-list.svg",
+        "visualAlt": "Boxes connected by arrows, each pointing to the next box",
+        "interviewQuestions": [
+            "Reverse a linked list.",
+            "Detect whether a linked list loops back on itself (Floyd's algorithm).",
+            "Find the middle node while only passing through the list once.",
+            "Merge two already-sorted linked lists into one."
+        ]
+    },
+    "tree": {
+        "title": "Tree",
+        "kicker": "Branching, parent-child structure",
+        "whatIsIt": "A tree starts with one node at the top (the root) and branches downward, where every node can have children of its own.",
+        "whyUseIt": "Trees are a natural fit for anything with a hierarchy, and a sorted tree lets you search, insert, and delete in a fraction of the time a plain list would take.",
+        "analogy": "A family tree. Everyone has one parent (except the very first ancestor), and each parent can have several children - the structure branches out.",
+        "code": "ds-cpp/tree.cpp",
+        "operations": [
+            { "name": "Search", "complexity": "O(log n) average, O(n) worst" },
+            { "name": "Insert", "complexity": "O(log n) average, O(n) worst" },
+            { "name": "Delete", "complexity": "O(log n) average, O(n) worst" },
+            { "name": "Visit every node", "complexity": "O(n)" }
+        ],
+        "types": [
+            { "name": "Binary Tree", "description": "Each node has at most two children." },
+            { "name": "Binary Search Tree (BST)", "description": "Smaller values go left, bigger values go right - this ordering is what makes searching fast." },
+            { "name": "AVL Tree", "description": "A BST that automatically keeps itself balanced so it never gets lopsided." },
+            { "name": "Red-Black Tree", "description": "Another self-balancing BST, using node 'colors' as the balancing rule." },
+            { "name": "B-Tree", "description": "A tree where each node can hold several values at once - common in databases." }
+        ],
+        "visualImage": "assets/visuals/tree.svg",
+        "visualAlt": "A root node connected to child nodes forming a hierarchical tree structure.",
+        "interviewQuestions": [
+            "Implement inorder, preorder, and postorder traversal.",
+            "Find the height of a binary tree.",
+            "Check whether a tree is balanced.",
+            "Find the lowest common ancestor of two nodes."
+        ]
+    },
+    "deque": {
+        "title": "Deque",
+        "kicker": "A queue open at both ends",
+        "whatIsIt": "Short for 'double-ended queue' - unlike a normal queue, you can add or remove items from both the front and the back.",
+        "whyUseIt": "That extra flexibility makes deques handy for undo/redo history, browser back-and-forward navigation, and sliding-window problems where you need to drop items from either end quickly.",
+        "analogy": "A train where passengers can board or get off from either the front door or the back door - not just one end.",
+        "code": "ds-cpp/deque.cpp",
+        "operations": [
+            { "name": "Insert at the front", "complexity": "O(1)" },
+            { "name": "Insert at the back", "complexity": "O(1)" },
+            { "name": "Remove from the front", "complexity": "O(1)" },
+            { "name": "Remove from the back", "complexity": "O(1)" },
+            { "name": "Look at either end", "complexity": "O(1)" }
+        ],
+        "types": [
+            { "name": "Input-restricted deque", "description": "You can only add items at one end, but remove from both." },
+            { "name": "Output-restricted deque", "description": "You can only remove items from one end, but add at both." }
+        ],
+        "visualImage": "assets/visuals/deque.svg",
+        "visualAlt": "A deque showing insertion and deletion possible from both the front and rear.",
+        "interviewQuestions": [
+            "Implement a deque using a plain array.",
+            "Implement a deque using a doubly linked list.",
+            "Solve the sliding window maximum problem.",
+            "Design a browser history feature using a deque."
+        ]
+    },
+    "hash-table": {
+        "title": "Hash Table",
+        "kicker": "Look things up by name, not position",
+        "whatIsIt": "A hash table stores data as key-value pairs - like a name paired with a phone number - and uses a hash function to figure out exactly where to store or find each pair.",
+        "whyUseIt": "Because the hash function tells you almost exactly where to look, hash tables give near-instant lookups, insertions, and deletions - perfect for dictionaries and caches.",
+        "analogy": "A library where every book has a code printed on the spine. Instead of scanning every shelf, the code tells you exactly which shelf to walk to.",
+        "code": "ds-cpp/hash-table.cpp",
+        "operations": [
+            { "name": "Insert", "complexity": "O(1) average, O(n) worst" },
+            { "name": "Search", "complexity": "O(1) average, O(n) worst" },
+            { "name": "Delete", "complexity": "O(1) average, O(n) worst" },
+            { "name": "Update", "complexity": "O(1) average, O(n) worst" }
+        ],
+        "types": [
+            { "name": "Separate chaining", "description": "When two keys land on the same spot, they're stored together in a small linked list at that spot." },
+            { "name": "Open addressing", "description": "When a spot is taken, the table looks for the next free spot nearby instead." }
+        ],
+        "visualImage": "assets/visuals/hash-table.svg",
+        "visualAlt": "A hash function mapping keys to indexed buckets in a hash table.",
+        "interviewQuestions": [
+            "Implement a hash table from scratch.",
+            "Explain a couple of ways to handle collisions.",
+            "Find the first character in a string that never repeats.",
+            "Design a Least Recently Used (LRU) cache."
+        ]
+    },
+    "heap": {
+        "title": "Heap",
+        "kicker": "The most important item is always on top",
+        "whatIsIt": "A heap is a tree-shaped structure where every parent follows one rule versus its children: always bigger (a Max Heap) or always smaller (a Min Heap).",
+        "whyUseIt": "Whenever you repeatedly need the biggest or smallest item out of a changing collection - like a priority queue or a scheduler - a heap gets you that answer fast, every time.",
+        "analogy": "A company org chart where the CEO always sits at the top. Every manager outranks their own team, so the top authority is always easy to spot.",
+        "code": "ds-cpp/heap.cpp",
+        "operations": [
+            { "name": "Insert", "complexity": "O(log n)" },
+            { "name": "Remove the top item", "complexity": "O(log n)" },
+            { "name": "Peek at the top item", "complexity": "O(1)" },
+            { "name": "Build a heap from a list", "complexity": "O(n)" }
+        ],
+        "types": [
+            { "name": "Max Heap", "description": "Every parent is greater than or equal to its children." },
+            { "name": "Min Heap", "description": "Every parent is smaller than or equal to its children." },
+            { "name": "Binary Heap", "description": "The most common way to build a heap, using a complete binary tree." }
+        ],
+        "visualImage": "assets/visuals/heap.svg",
+        "visualAlt": "A complete binary tree illustrating the heap property with parent nodes greater than or less than their children.",
+        "interviewQuestions": [
+            "Implement a Max Heap from scratch.",
+            "Turn a Min Heap into a Max Heap.",
+            "Find the kth largest value using a heap.",
+            "Explain how Heap Sort works."
+        ]
+    },
+    "graph": {
+        "title": "Graph",
+        "kicker": "Nodes connected in a network",
+        "whatIsIt": "A graph is a set of nodes (called vertices) connected by links (called edges). Unlike a tree, a graph can loop back on itself and connect nodes in any pattern.",
+        "whyUseIt": "Graphs are how we model real networks - friend connections on social media, roads on a map, or links between web pages - anywhere relationships matter more than a strict hierarchy.",
+        "analogy": "A map of cities connected by roads. Each city is a vertex, each road is an edge, and there can be several different routes between any two cities.",
+        "code": "ds-cpp/graph.cpp",
+        "operations": [
+            { "name": "Add a vertex", "complexity": "O(1)" },
+            { "name": "Add an edge", "complexity": "O(1)" },
+            { "name": "Remove an edge", "complexity": "O(1)" },
+            { "name": "Breadth-First Search (BFS)", "complexity": "O(V + E)" },
+            { "name": "Depth-First Search (DFS)", "complexity": "O(V + E)" }
+        ],
+        "types": [
+            { "name": "Undirected graph", "description": "Edges go both ways - if A connects to B, B connects to A." },
+            { "name": "Directed graph", "description": "Edges point in one direction only, like a one-way street." },
+            { "name": "Weighted graph", "description": "Each edge carries a cost, like distance or travel time." },
+            { "name": "Unweighted graph", "description": "Edges just represent a connection, with no extra cost attached." },
+            { "name": "Acyclic graph", "description": "Contains no loops. A Directed Acyclic Graph (DAG) is common in task scheduling." }
+        ],
+        "visualImage": "assets/visuals/graph.svg",
+        "visualAlt": "A collection of vertices connected by edges representing relationships in a graph.",
+        "interviewQuestions": [
+            "Implement Breadth-First Search (BFS).",
+            "Implement Depth-First Search (DFS).",
+            "Detect whether a graph contains a cycle.",
+            "Find the shortest path between two vertices.",
+            "Explain the difference between an adjacency list and an adjacency matrix."
+        ]
+    }
+}

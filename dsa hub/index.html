@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSA Hub</title>
+    <link rel="stylesheet" href="css/indexstyle.css">
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="index.html" aria-label="DSA Hub home">
+            <span class="brand-mark">D</span>
+            <span>DSA Hub</span>
+        </a>
+        <nav class="main-nav" aria-label="Primary navigation">
+            <a href="#login">Login</a>
+            <a href="#progress">Track Progress</a>
+            <a href="#roadmap">Roadmap</a>
+            <a href="#about">About</a>
+        </nav>
+
+    </header>
+
+    <main>
+         <section class="hero-section" id="login">
+            <div class="hero-copy">
+                <p class="eyebrow">Build logic. Track growth. Master patterns.</p>
+                <h1>Data Structures and Algorithms</h1>
+                <p class="hero-text">
+                    A focused learning space for understanding how data is stored, how problems are solved,
+                    and how both ideas work together in real programming challenges.
+                </p>
+
+                <div class="hero-actions" aria-label="Learning actions">
+                    <a class="primary-action" href="#learning-path">Start Index</a>
+                    <a class="secondary-action" href="#difference">Compare Both</a>
+                </div>
+            </div>
+            
+            <div class="hero-visual" aria-label="Animated data structure and algorithm visual">
+                <div class="circuit-line circuit-line-one"></div>
+                <div class="circuit-line circuit-ltine-two"></div>
+                <div class="data-node node-root">root</div>
+                <div class="data-node node-left">stack</div>
+                <div class="data-node node-right">queue</div>
+                <div class="data-node node-bottom">graph</div>
+                <div class="logic-chip">
+                    <span>O(log n)</span>
+                    <span>while</span>
+                    <span>sort()</span>
+                    <span>return</span>
+                </div>
+            </div>
+        </section> 
+
+         <section class="intro-section">
+            <div class="section-heading">
+                <p class="eyebrow">How this site will work</p>
+                <h2>Learn DSA like a guided system, not random notes.</h2>
+            </div>
+            <p>
+                This website will become a structured DSA learning hub where each topic has simple explanations,
+                visual examples, dry runs, practice problems, and progress tracking. The goal is to move from
+                basics to interview-level problem solving without losing the connection between concepts and code.
+            </p>
+        </section> 
+
+        <section class="learning-section" id="learning-path">
+            <div class="section-heading">
+                <p class="eyebrow">Choose your track</p>
+                <h2>Two sides of the same problem-solving engine.</h2>
+            </div>
+
+            <div class="topic-grid">          
+
+                <article class="topic-card">
+                    <div class="topic-icon" aria-hidden="true">1</div>
+                    <p class="topic-kicker">Big O Notation</p>
+                    <h3>Complexity Analysis</h3>
+                    <p>
+                       Learn Big O notation, time complexity, and space complexity to analyze performance, 
+                       compare solutions, and write efficient <br>code for real-world problems.             </p>
+                    <a href="complexity-analysis.html">Open Time Complexity</a>
+                </article>
+
+                <article class="topic-card">
+                    <div class="topic-icon" aria-hidden="true">2</div>
+                    <p class="topic-kicker">Storage and organization</p>
+                    <h3>Data Structures</h3>
+                    <p>
+                        Learn arrays, linked lists, stacks, queues, trees, graphs, heaps, hash tables,
+                        and how each structure changes the way data can be accessed or updated.
+                    </p>
+                    <a href="data-structures.html">Open Data Structures</a>
+                </article>
+
+                <article class="topic-card">
+                    <div class="topic-icon" aria-hidden="true">3</div>
+                    <p class="topic-kicker">Steps and strategy</p>
+                    <h3>Algorithms</h3>
+                    <p>
+                        Learn searching, sorting, recursion, dynamic programming, greedy methods,
+                        graph traversal, and the patterns used to solve problems efficiently.
+                    </p>
+                    <a href="algorithms.html">Open Algorithms</a>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="difference-section" id="difference">
+            <div class="difference-reveal" tabindex="0">
+                <button type="button" class="difference-trigger" aria-expanded="false">
+                    <span>Data Structures vs Algorithms</span>
+                    <span class="trigger-arrow" aria-hidden="true">+</span>
+                </button>
+
+                <div class="difference-panel">
+                    <div class="difference-grid">
+                        <div>
+                            <h3>Data Structures</h3>
+                            <p>
+                                Data structures are the containers. They decide how information is arranged in
+                                memory so it can be inserted, deleted, searched, or connected.
+                            </p>
+                        </div>
+                        <div>
+                            <h3>Algorithms</h3>
+                            <p>
+                                Algorithms are the instructions. They define the step-by-step process used to
+                                transform input into the correct output.
+                            </p>
+                        </div>
+                    </div>
+                    <p class="difference-note">
+                        Example: a graph is a data structure. Breadth-first search is an algorithm that uses a
+                        graph to explore nodes level by level.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+         <section class="progress-section" id="progress">
+            <div class="section-heading">
+                <p class="eyebrow">Tracking progress</p>
+                <h2>A learning dashboard will live here next.</h2>
+            </div>
+
+            <div class="progress-grid">
+                <div class="progress-item">
+                    <span>01</span>
+                    <h3>Topic Map</h3>
+                    <p>Move through foundations, structures, patterns, and problem sets in order.</p>
+                </div>
+                <div class="progress-item">
+                    <span>02</span>
+                    <h3>Practice Log</h3>
+                    <p>Record solved problems, difficulty, mistakes, and revision status.</p>
+                </div>
+                <div class="progress-item">
+                    <span>03</span>
+                    <h3>Weak Areas</h3>
+                    <p>Spot topics that need another pass before moving to harder patterns.</p>
+                </div>
+            </div>
+        </section> 
+ 
+        <section class="roadmap-section" id="roadmap">
+            <div class="section-heading">
+                <p class="eyebrow">Roadmap</p>
+                <h2>The first path will start with fundamentals.</h2>
+            </div>
+
+            <div class="roadmap">
+                <div class="roadmap-step">
+                    <span></span>
+                    <p>Complexity analysis - Time and Space Complexity</p>
+                </div>
+                <div class="roadmap-step">
+                    <span></span>
+                    <p>Data Structures - From arrays, stacks to trees, hash maps and graphs</p>
+                </div>
+                <div class="roadmap-step">
+                    <span></span>
+                    <p>Algorithms - use to sort and manage data</p>
+                </div>
+                <div class="roadmap-step">
+                    <span></span>
+                    <p>Problem Solving - using leet code and interview questions</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section" id="about">
+            <div class="section-heading">
+                <p class="eyebrow">About</p>
+                <h2>DSA Hub is being built as a calm, visual, practice-first learning space.</h2>
+            </div>
+            <p>
+                The index page is the control room. From here, learners will enter the Data Structures track,
+                the Algorithms track, check progress, and return to topics that need revision. The design keeps
+                the dark futuristic feeling from your portfolio but shifts the identity into green and black.
+            </p>
+        </section>
+    </main> 
+
+    <footer class="site-footer">
+        <p>DSA Hub</p>
+        <p>Data Structures. Algorithms. Practice. Progress.</p>
+    </footer>
+
+    <script src="js/keepitopen.js"></script>
+</body>
+</html>

@@ -1,0 +1,250 @@
+/*
+   data-structures.css
+   -------------------
+   Styles for data-structures.html (sidebar + content layout).
+
+   Note: ds-script.js builds #topic-content's contents with innerHTML
+   using plain tags (h1, h2, h3, table, ul, pre, code — no classes), so
+   most of the rules below target those tags directly, scoped under
+   #topic-content so they don't leak into the rest of the site.
+*/
+
+/* ---------- Two-column layout ---------- */
+
+/* Widened past indexstyle.css's usual 1160px so the content panel has
+   more breathing room. Overriding .page-hero's max-width too, just
+   below, keeps the hero text above lined up with this wider grid. */
+
+.page-hero {
+    max-width: 1400px;
+}
+
+.dsa-shown {
+    max-width: 1400px;
+    margin: 40px auto 96px;
+    padding: 0 48px;
+    display: grid;
+    grid-template-columns: 260px minmax(0, 1fr);
+    align-items: start;
+    gap: 40px;
+}
+
+/* ---------- Sidebar ---------- */
+
+.sidebar {
+    position: sticky;
+    top: 94px; /* clears the sticky site-header (74px) plus a gap */
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 24px 20px;
+}
+
+.sidebar h2 {
+    color: var(--amber);
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+#topic-list {
+    list-style: none;
+    display: grid;
+    gap: 6px;
+}
+
+.topic-item {
+    padding: 10px 14px;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    color: var(--muted);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    cursor: pointer;
+    transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease,
+        border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.topic-item:hover {
+    transform: translateX(6px);
+    color: var(--mint-soft);
+    background: rgba(111, 207, 151, 0.16);
+    border-color: rgba(111, 207, 151, 0.55);
+    box-shadow: 0 8px 20px rgba(54, 142, 92, 0.18);
+    text-shadow: 0 0 10px rgba(184, 242, 207, 0.45);
+}
+
+/* Not wired up in ds-script.js yet (highlightActive isn't called from
+   showTopic), but the style is ready for whenever you add a
+   li.classList.add("active") call on click. */
+.topic-item.active {
+    color: var(--mint-soft);
+    background: rgba(111, 207, 151, 0.24);
+    border-color: rgba(111, 207, 151, 0.75);
+    box-shadow: 0 0 18px rgba(111, 207, 151, 0.2);
+}
+
+/* ---------- Content panel ---------- */
+
+#topic-content {
+    min-height: 420px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 36px 40px;
+}
+
+#topic-content .placeholder {
+    color: var(--muted);
+    font-size: 16px;
+    text-align: center;
+    padding: 80px 0;
+}
+
+/* Title + kicker */
+
+#topic-content h1 {
+    font-size: 34px;
+    font-weight: 900;
+    margin-bottom: 6px;
+}
+
+#topic-content h3 {
+    color: var(--amber);
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+}
+
+#topic-content hr {
+    border: none;
+    border-top: 1px solid var(--line);
+    margin: 24px 0 28px;
+}
+
+/* Section headers + body text */
+
+#topic-content h2 {
+    color: var(--mint-soft);
+    font-size: 22px;
+    font-weight: 900;
+    margin: 32px 0 12px;
+}
+
+#topic-content h2:first-of-type {
+    margin-top: 0;
+}
+
+#topic-content p {
+    max-width: 700px;
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.75;
+}
+
+/* Operations table */
+
+#topic-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0 8px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#topic-content th,
+#topic-content td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--line);
+    font-size: 14px;
+}
+
+#topic-content th {
+    background: rgba(111, 207, 151, 0.08);
+    color: var(--text);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+#topic-content td {
+    color: var(--muted);
+}
+
+#topic-content td:last-child {
+    color: var(--green);
+    font-weight: 800;
+}
+
+#topic-content tr:last-child td {
+    border-bottom: none;
+}
+
+/* Types list + interview questions */
+
+#topic-content ul,
+#topic-content ol {
+    margin: 8px 0 8px 20px;
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.75;
+}
+
+#topic-content ul li,
+#topic-content ol li {
+    margin-bottom: 10px;
+}
+
+#topic-content ul strong {
+    color: var(--text);
+}
+
+/* C++ implementation */
+
+#topic-content pre {
+    overflow-x: auto;
+    margin: 12px 0;
+    padding: 20px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: rgba(3, 5, 4, 0.85);
+    box-shadow: inset 0 0 20px rgba(111, 207, 151, 0.04);
+}
+
+#topic-content code {
+    color: var(--mint-soft);
+    font-family: "Fira Code", Consolas, monospace;
+    font-size: 13.5px;
+    line-height: 1.7;
+    white-space: pre;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 900px) {
+    .dsa-shown {
+        grid-template-columns: 1fr;
+        padding: 0 28px;
+    }
+
+    .sidebar {
+        position: static;
+    }
+}
+
+@media (max-width: 680px) {
+    .dsa-shown {
+        padding: 0 22px;
+    }
+
+    #topic-content {
+        padding: 28px 22px;
+    }
+}

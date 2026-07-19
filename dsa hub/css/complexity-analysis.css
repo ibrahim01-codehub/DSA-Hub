@@ -1,0 +1,294 @@
+.detail-hero {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 148px 56px 96px;
+}
+
+
+.upper-hero {
+    max-width: 760px;
+}
+
+.eye {
+    margin-bottom: 6px;
+}
+
+.eyelash-one {
+    color: var(--mint-soft);
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 0.4px;
+    margin-top: 18px;
+}
+
+.eyelash-two {
+    color: var(--muted);
+    font-size: 18px;
+    line-height: 1.75;
+    margin-top: 12px;
+}
+
+
+.comparison-of-types {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 64px;
+}
+
+.heading-of-types {
+    grid-column: 1 / -1;
+    display: block;
+    font-size: 32px;
+    font-weight: 900;
+    letter-spacing: 0.2px;
+    margin-bottom: 8px;
+}
+
+.time-comp,
+.space-comp {
+    border: 1px solid var(--line);
+    border-top: 3px solid var(--green);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 28px 24px;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.space-comp {
+    border-top-color: var(--amber);
+}
+
+.time-comp:hover,
+.space-comp:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(54, 142, 92, 0.15);
+}
+
+.type-toggle.active-type {
+    border-color: var(--green);
+    box-shadow: 0 0 0 2px var(--green), 0 12px 30px rgba(54, 142, 92, 0.18);
+}
+
+.space-comp.active-type {
+    box-shadow: 0 0 0 2px var(--amber), 0 12px 30px rgba(54, 142, 92, 0.18);
+}
+
+.tap-hint {
+    margin-top: 16px !important;
+    font-size: 12px !important;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    color: var(--mint-soft) !important;
+    font-style: normal !important;
+}
+
+.loading-msg {
+    text-align: center;
+    color: var(--muted);
+    font-size: 15px;
+    padding: 40px 0;
+}
+
+.time-comp h3,
+.space-comp h3 {
+    font-size: 24px;
+    color: var(--mint-soft);
+    margin-bottom: 14px;
+}
+
+.time-comp p,
+.space-comp p {
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.68;
+}
+
+.time-comp .e-def,
+.space-comp .e-def {
+    color: var(--text);
+    font-style: italic;
+    margin-top: 14px;
+}
+
+.time-comp .equation,.e-def{
+    padding-top: 15px;
+}
+
+
+.time-comp .equation,
+.space-comp .equation {
+    color: var(--amber);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    margin-top: 14px;
+}
+
+
+.moving-on-from-types-heading {
+    grid-column: 1 / -1;
+    margin-top: 16px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+    text-align: center;
+}
+
+.moving-on-from-types-heading p {
+    max-width: 720px;
+    margin: 0 auto;
+    color: var(--muted);
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* Dynamic example cards (populated by time-complexity.js) */
+
+.time-comp-display {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 56px 96px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.time-comp-display hr {
+    display: none;
+}
+
+.example-card {
+    border: 1px solid var(--line);
+    border-top: 3px solid var(--green);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 32px;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.example-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(54, 142, 92, 0.15);
+}
+
+.example-card h2 {
+    color: var(--mint-soft);
+    font-size: 26px;
+    font-weight: 900;
+    letter-spacing: 0.2px;
+    margin-bottom: 20px;
+}
+
+.example-card pre {
+    background: rgba(0, 0, 0, 0.28);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 20px 22px;
+    margin: 0;
+    overflow-x: auto;
+    tab-size: 4;
+}
+
+.example-card pre::-webkit-scrollbar {
+    height: 8px;
+}
+
+.example-card pre::-webkit-scrollbar-thumb {
+    background: var(--line);
+    border-radius: 4px;
+}
+
+.example-card pre::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.example-card pre code {
+    display: block;
+    font-family: "Fira Code", Consolas, Monaco, monospace;
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--text);
+    white-space: pre;
+}
+
+.example-card h3 {
+    color: var(--amber);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    margin-top: 24px;
+    margin-bottom: 10px;
+}
+
+.example-card p {
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.68;
+}
+
+.example-card p:first-of-type {
+    display: inline-block;
+    color: var(--amber);
+    background: color-mix(in srgb, var(--amber) 14%, transparent);
+    border: 1px solid color-mix(in srgb, var(--amber) 40%, transparent);
+    font-family: "Fira Code", Consolas, Monaco, monospace;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 5px 14px;
+    border-radius: 6px;
+    line-height: 1.5;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .example-card {
+        transition: none;
+    }
+
+    .example-card:hover {
+        transform: none;
+    }
+}
+
+
+@media (max-width: 780px) {
+    .comparison-of-types {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 680px) {
+    .detail-hero {
+        padding: 120px 22px 64px;
+    }
+
+    .heading-of-types {
+        font-size: 26px;
+    }
+
+    .time-comp-display {
+        padding: 0 22px 64px;
+        gap: 28px;
+    }
+
+    .example-card {
+        padding: 22px;
+    }
+
+    .example-card h2 {
+        font-size: 22px;
+    }
+
+    .example-card pre {
+        padding: 14px 16px;
+    }
+
+    .example-card pre code {
+        font-size: 13px;
+    }
+}

@@ -1,0 +1,142 @@
+[
+  {
+    "id": "eg1",
+    "title": "Access Array Element by Index",
+    "code": "codecppfortimecomp/Source.cpp",
+    "time-complexity": "O(1)",
+    "reason": "Accessing an array element by its index is a direct memory lookup. It takes the same amount of time no matter how large the array is, so the time complexity is constant."
+  },
+  {
+    "id": "eg2",
+    "title": "Swap Two Numbers",
+    "code": "codecppfortimecomp/Source1.cpp",
+    "time-complexity": "O(1)",
+    "reason": "Swapping two variables always takes exactly one temporary assignment and two reassignments, regardless of the values involved. This fixed number of operations makes it constant time."
+  },
+  {
+    "id": "eg3",
+    "title": "Check Even or Odd",
+    "code": "codecppfortimecomp/Source2.cpp",
+    "time-complexity": "O(1)",
+    "reason": "A single modulo operation and comparison decide the result. The size of the number doesn't add any extra steps, so this runs in constant time."
+  },
+  {
+    "id": "eg4",
+    "title": "Find Maximum in Array",
+    "code": "codecppfortimecomp/Source3.cpp",
+    "time-complexity": "O(n)",
+    "reason": "Every element must be checked once to be sure no larger value was missed. The number of comparisons grows directly with the array size, giving linear time complexity."
+  },
+  {
+    "id": "eg5",
+    "title": "Sum of Array Elements",
+    "code": "codecppfortimecomp/Source4.cpp",
+    "time-complexity": "O(n)",
+    "reason": "Each element is visited exactly once to add it to the running total, so the total work scales linearly with the number of elements."
+  },
+  {
+    "id": "eg6",
+    "title": "Count Occurrences of a Target",
+    "code": "codecppfortimecomp/Source5.cpp",
+    "time-complexity": "O(n)",
+    "reason": "Since the target could appear anywhere, or not at all, every element must be inspected once. This gives a time complexity that grows linearly with input size."
+  },
+  {
+    "id": "eg7",
+    "title": "Reverse a String In-Place",
+    "code": "codecppfortimecomp/Source6.cpp",
+    "time-complexity": "O(n)",
+    "reason": "Two pointers move toward each other and together cover every character exactly once, so the number of swaps grows linearly with the length of the string."
+  },
+  {
+    "id": "eg8",
+    "title": "Linear Search",
+    "code": "codecppfortimecomp/Source7.cpp",
+    "time-complexity": "O(n)",
+    "reason": "In the worst case the target is the last element or missing entirely, so every element must be checked before the search can conclude. This makes the running time grow linearly with n."
+  },
+  {
+    "id": "eg9",
+    "title": "Recursive Factorial",
+    "code": "codecppfortimecomp/Source8.cpp",
+    "time-complexity": "O(n)",
+    "reason": "The function calls itself once per decrement of n until it reaches the base case, resulting in exactly n recursive calls and linear time complexity."
+  },
+  {
+    "id": "eg10",
+    "title": "Binary Search (Iterative)",
+    "code": "codecppfortimecomp/Source9.cpp",
+    "time-complexity": "O(log n)",
+    "reason": "Every comparison eliminates half of the remaining search space. Repeatedly halving n until one element is left takes about log₂(n) steps, giving logarithmic time complexity."
+  },
+  {
+    "id": "eg11",
+    "title": "Fast Exponentiation (Binary Exponentiation)",
+    "code": "codecppfortimecomp/Source10.cpp",
+    "time-complexity": "O(log n)",
+    "reason": "Instead of multiplying the base exp times, the exponent is halved on every iteration. This means the loop runs about log₂(exp) times, making it far faster than a naive O(n) approach."
+  },
+  {
+    "id": "eg12",
+    "title": "Merge Sort",
+    "code": "codecppfortimecomp/Source11.cpp",
+    "time-complexity": "O(n log n)",
+    "reason": "The array is split in half at every level, producing log₂(n) levels of recursion. At each level, merging touches every element once, so total work is n multiplied by log₂(n)."
+  },
+  {
+    "id": "eg13",
+    "title": "Quick Sort",
+    "code": "codecppfortimecomp/Source12.cpp",
+    "time-complexity": "O(n log n)",
+    "reason": "On average, each partition step splits the array roughly in half, giving log₂(n) levels of recursion, and each level does O(n) work to partition. A poor pivot choice can degrade this to O(n²) in the worst case."
+  },
+  {
+    "id": "eg14",
+    "title": "Bubble Sort",
+    "code": "codecppfortimecomp/Source13.cpp",
+    "time-complexity": "O(n²)",
+    "reason": "For every element, the inner loop compares it against most of the remaining elements to bubble the largest values to the end. This nested comparison pattern results in roughly n²/2 comparisons, giving quadratic time complexity."
+  },
+  {
+    "id": "eg15",
+    "title": "Selection Sort",
+    "code": "codecppfortimecomp/Source14.cpp",
+    "time-complexity": "O(n²)",
+    "reason": "For each position in the array, the algorithm scans the remaining unsorted elements to find the minimum. This gives roughly n + (n-1) + ... + 1 comparisons, which simplifies to O(n²)."
+  },
+  {
+    "id": "eg16",
+    "title": "Find Duplicate Elements (Brute Force)",
+    "code": "codecppfortimecomp/Source15.cpp",
+    "time-complexity": "O(n²)",
+    "reason": "Every element is compared against every other element that comes after it, so the number of comparisons grows proportionally to n². A hash set could reduce this to O(n)."
+  },
+  {
+    "id": "eg17",
+    "title": "Matrix Multiplication",
+    "code": "codecppfortimecomp/Source16.cpp",
+    "time-complexity": "O(n³)",
+    "reason": "Computing each of the n² entries in the result matrix requires an inner loop of n multiplications. Multiplying n² result cells by n operations each gives n³ total operations, hence cubic time complexity."
+  },
+  {
+    "id": "eg18",
+    "title": "Recursive Fibonacci",
+    "code": "codecppfortimecomp/Source17.cpp",
+    "time-complexity": "O(2ⁿ)",
+    "reason": "Each call branches into two more calls, and the same sub-problems are recalculated many times over. This branching pattern causes the total number of calls to roughly double with every increase in n, giving exponential time complexity."
+  },
+  {
+    "id": "eg19",
+    "title": "Generate All Subsets (Power Set)",
+    "code": "codecppfortimecomp/Source18.cpp",
+    "time-complexity": "O(2ⁿ)",
+    "reason": "Each of the n elements can either be included or excluded from a subset, giving two choices per element. Multiplying two choices across n elements produces 2ⁿ possible subsets, so generating all of them takes exponential time."
+  },
+  {
+    "id": "eg20",
+    "title": "Generate All Permutations",
+    "code": "codecppfortimecomp/Source19.cpp",
+    "time-complexity": "O(n!)",
+    "reason": "The first position has n choices, the second has n-1 remaining choices, and so on until only one choice is left. Multiplying these choices together gives n! total permutations, making this the fastest-growing complexity class covered here."
+  }
+]

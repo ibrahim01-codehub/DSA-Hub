@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complexity Analysis | DSA Hub</title>
+    <link rel="stylesheet" href="css/indexstyle.css">
+    <link rel="stylesheet" href="css/complexity-analysis.css">
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="index.html" aria-label="DSA Hub home">
+            <span class="brand-mark">D</span>
+            <span>DSA Hub</span>
+        </a>
+        <nav class="main-nav" aria-label="Primary navigation">
+            <a href="index.html#login">Login</a>
+            <a href="index.html#progress">Track Progress</a>
+            <a href="index.html#roadmap">Roadmap</a>
+            <a href="index.html#about">About</a>
+        </nav>
+    </header>
+ 
+    <main>
+        <section class="detail-hero">
+            <div class="upper-hero">
+                <h1 class="eye">Complexity Analysis</h1>
+                <p class="eyelash-one">What is complexity analysis??</p>
+                <p class="eyelash-two">
+                    Complexity Analysis is a way to measure how efficient your code is,
+                    without actually running it.
+                </p>
+            </div>
+ 
+            <div class="comparison-of-types">
+                <span class="heading-of-types">Types of complexity analysis</span>
+ 
+                <div class="time-comp type-toggle active-type" id="time-comp-toggle" role="button" tabindex="0" aria-pressed="true">
+                    <h3>Time Complexity</h3>
+                    <p class="l-def">
+                        Time Complexity is a measure of how the number of steps an algorithm
+                        takes grows as the input size (n) grows.
+                    </p><br><br>
+                    <p class="e-def">If I throw more data at my code, how much slower does it get?</p>
+                   <br>
+                    <p class="equation">Time complexity has an answer in terms of an equation</p>
+                    <p class="tap-hint">Click to view examples ↓</p>
+                </div>
+ 
+                <div class="space-comp type-toggle" id="space-comp-toggle" role="button" tabindex="0" aria-pressed="false">
+                    <h3>Space Complexity</h3>
+                    <p class="l-def">
+                        Space complexity measures the total amount of memory an algorithm
+                        needs to run, as a function of the input size (n). This includes
+                        both the space for the input itself and any extra (auxiliary)
+                        space the algorithm creates.
+                    </p>
+                    <p class="e-def">How much extra scratch paper does my code need when I give it more data?</p>
+                    <p class="equation">Space complexity has an answer in terms of an "O"</p>
+                    <p class="tap-hint">Click to view examples ↓</p>
+                </div>
+ 
+                <div class="moving-on-from-types-heading">
+                    <p>
+                        It will get easy and clear once we dive into problems and see how to
+                        measure time and space complexity.
+                    </p>
+                </div>
+            </div>
+        </section>
+ 
+        <section>
+            <div class="time-comp-display"  id="data-shown-here-of-time-complexity">
+            </div>
+        </section>
+        
+    </main>
+ 
+    <footer class="site-footer">
+        <p>DSA Hub</p>
+        <p>Data Structures. Algorithms. Practice. Progress.</p>
+    </footer>
+ 
+    <script src="js/time-complexity.js"></script>
+</body>
+</html>
+ 

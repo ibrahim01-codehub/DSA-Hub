@@ -1,0 +1,86 @@
+[
+  {
+    "id": "sc1",
+    "title": "Hello World",
+    "code": "codecppforspacecomp/Source.cpp",
+    "space-complexity": "O(1)",
+    "reason": "The program doesn't create any extra data structures. No matter the input, memory usage stays exactly the same, so the space complexity is constant."
+  },
+  {
+    "id": "sc2",
+    "title": "Simple Variable Assignment",
+    "code": "codecppforspacecomp/Source1.cpp",
+    "space-complexity": "O(1)",
+    "reason": "Only a fixed number of integer variables are declared. Since this count never changes with input size, the space used stays constant."
+  },
+  {
+    "id": "sc3",
+    "title": "If Statement",
+    "code": "codecppforspacecomp/Source2.cpp",
+    "space-complexity": "O(1)",
+    "reason": "An if statement only needs the memory for the variable being compared. No additional memory is allocated based on input, so space stays constant."
+  },
+  {
+    "id": "sc4",
+    "title": "Single Loop (No Extra Storage)",
+    "code": "codecppforspacecomp/Source3.cpp",
+    "space-complexity": "O(1)",
+    "reason": "The loop only reuses the same counter and sum variables on every iteration. No array or structure grows with n, so auxiliary space is constant, even though the time complexity of this same loop is O(n)."
+  },
+  {
+    "id": "sc5",
+    "title": "Loop Storing Results in an Array",
+    "code": "codecppforspacecomp/Source4.cpp",
+    "space-complexity": "O(n)",
+    "reason": "The loop fills an array with n elements. Since the memory needed grows directly with the input size, the space complexity is linear."
+  },
+  {
+    "id": "sc6",
+    "title": "Nested Loop Building a 2D Matrix",
+    "code": "codecppforspacecomp/Source5.cpp",
+    "space-complexity": "O(n²)",
+    "reason": "An n x n matrix is created to hold the results. Since the matrix has n² total cells, the memory required grows quadratically with the input size."
+  },
+  {
+    "id": "sc7",
+    "title": "Simple Recursive Function",
+    "code": "codecppforspacecomp/Source6.cpp",
+    "space-complexity": "O(n)",
+    "reason": "Even though no array is used, each recursive call adds a new frame to the call stack until the base case is reached. With n nested calls active at once, the stack space grows linearly."
+  },
+  {
+    "id": "sc8",
+    "title": "Recursive Fibonacci",
+    "code": "codecppforspacecomp/Source7.cpp",
+    "space-complexity": "O(n)",
+    "reason": "Although naive recursive Fibonacci makes an exponential number of calls over time, only one branch of the recursion tree is ever active on the call stack at a time. The maximum stack depth is n, so the space complexity is linear despite the exponential time complexity."
+  },
+  {
+    "id": "sc9",
+    "title": "Iterative Binary Search",
+    "code": "codecppforspacecomp/Source8.cpp",
+    "space-complexity": "O(1)",
+    "reason": "The search only tracks a few pointers (low, high, mid) that are updated in place. No extra memory is allocated as the input grows, so the space stays constant."
+  },
+  {
+    "id": "sc10",
+    "title": "Recursive Binary Search",
+    "code": "codecppforspacecomp/Source9.cpp",
+    "space-complexity": "O(log n)",
+    "reason": "Each recursive call halves the search range, so the maximum recursion depth is log₂(n). Every active call adds a frame to the stack, giving logarithmic space complexity."
+  },
+  {
+    "id": "sc11",
+    "title": "Merge Sort",
+    "code": "codecppforspacecomp/Source10.cpp",
+    "space-complexity": "O(n)",
+    "reason": "During each merge step, temporary arrays are created to hold the elements being merged. Across the whole sort, the extra memory needed adds up to O(n), which is why merge sort is not considered an in-place algorithm."
+  },
+  {
+    "id": "sc12",
+    "title": "In-Place Array Reversal",
+    "code": "codecppforspacecomp/Source11.cpp",
+    "space-complexity": "O(1)",
+    "reason": "The array is reversed by swapping elements directly within the same array, using only a couple of index variables. No new data structure is created, so the space complexity is constant."
+  }
+]
